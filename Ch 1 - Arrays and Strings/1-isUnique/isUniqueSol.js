@@ -1,4 +1,4 @@
-var allUniqueChars = function (string) {
+var isUniqueEC = function (string) {
   // O(n^2) approach, no additional data structures used
   // for each character, check remaining characters for duplicates
   for (var i = 0; i < string.length; i++) {
@@ -8,29 +8,19 @@ var allUniqueChars = function (string) {
       }
     }
   }
-  return true; // if no match, return true
-};
-
-const everyCharUnique = (str, indexOffset = 'a'.charCodeAt()) => {
-  let counterTable = Number();
-  for (let index of [...str].map((c) => c.charCodeAt() - indexOffset)) {
-    const mask = 1 << index;
-    if (counterTable & mask) return false;
-    counterTable |= mask;
-  }
   return true;
 };
 
-function isUnique(str) {
+const isUnique = (str) => {
   let obj = {};
   for (let i = 0; i < str.length; i++) {
-    if (obj[str[i]] && obj[str[i]] >= 1) {
+    if (obj[str[i]]) {
       return false;
     } else {
       obj[str[i]] = 1;
     }
   }
   return true;
-}
+};
 
 module.exports = isUnique;

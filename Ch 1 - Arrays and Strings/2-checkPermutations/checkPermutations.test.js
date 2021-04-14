@@ -18,3 +18,13 @@ console.log(
   checkPermutationsSol('aba', 'aa'),
   checkPermutations('aba', 'aa')
 );
+console.log(
+  "('racecar', 'carerac')",
+  checkPermutationsSol('racecar', 'carerac'),
+  checkPermutations('racecar', 'carerac')
+);
+console.log(
+  "('scooptity', 'whoop')",
+  checkPermutationsSol('scooptity', 'whoop'),
+  checkPermutations('scooptity', 'whoop')
+);
