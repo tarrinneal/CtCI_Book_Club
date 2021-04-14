@@ -2,4 +2,13 @@
 
 module.exports = (string) => {
   //solve this
+  let chars = {};
+  for( let i = 0; i < string.length; i++ ) {
+    if(chars[string[i]] === undefined) {
+      chars[string[i]] = 1;
+    } else {
+      return false;
+    }
+  }
+  return true;
 };
