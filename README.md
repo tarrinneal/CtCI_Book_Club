@@ -4,8 +4,7 @@ JS skeleton and solutions (hopefully testing) for every question in Cracking The
 
 Make sure to read the chapter before you start answering the questions!
 
-The test files are set up to be run with a simple node command
-Just write your code in to the provided function, then run the test file with node!
+Before tests will work, you will need to run `npm install`
+Then just run `npm test` or `npm test <file path>` to only test one file
 
 The solutions are all in the Sol file, but don't cheat! You'll be missing out on valuable learning opportunities!
-
