@@ -24,13 +24,19 @@ const palindromePermutationsSol = require('./palindromePermutationsSol');
 // );
 
 test('Correctly identifies strings that are permutations of palindromes', () => {
-  expect(checkPermutations('Tact Coa')).toBe(checkPermutationsSol('Tact Coa'));
-  expect(checkPermutations('Race Car')).toBe(checkPermutationsSol('Race Car'));
+  expect(palindromePermutations('Tact Coa')).toBe(
+    palindromePermutationsSol('Tact Coa')
+  );
+  expect(palindromePermutations('Race Car')).toBe(
+    palindromePermutationsSol('Race Car')
+  );
 });
 
 test('Correctly identifies strings that are NOT permutations of palindromes', () => {
-  expect(checkPermutations('Tact boa')).toBe(checkPermutationsSol('Tact boa'));
-  expect(checkPermutations('boopty scoopty woop')).toBe(
-    checkPermutationsSol('boopty scoopty woop')
+  expect(palindromePermutations('Tact boa')).toBe(
+    palindromePermutationsSol('Tact boa')
+  );
+  expect(palindromePermutations('boopty scoopty woop')).toBe(
+    palindromePermutationsSol('boopty scoopty woop')
   );
 });
