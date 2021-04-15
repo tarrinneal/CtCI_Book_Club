@@ -13,4 +13,15 @@ function llGenerator(values) {
   return head;
 }
 
-module.exports = llGenerator;
+function iterateToNode(head, index) {
+  let count = 0;
+  let node = head;
+  while (node) {
+    count++;
+    if (count === index) return node;
+    node = node.next;
+  }
+  return null;
+}
+
+module.exports = {iterateToNode, llGenerator};
