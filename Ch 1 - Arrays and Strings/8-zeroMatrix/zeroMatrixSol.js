@@ -59,6 +59,7 @@ var zeroMatrix = function (matrix) {
 
   zeroifyCols(matrix, zeroScan);
   zeroifyRows(matrix, zeroScan);
+  return matrix;
 };
 
 module.exports = zeroMatrix;
