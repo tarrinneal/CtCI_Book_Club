@@ -1,6 +1,6 @@
 # CtCI_Book_Club
 
-JS skeleton and solutions (hopefully testing) for every question in Cracking The Coding Interview
+JS prompts and solutions as well as testing for every question in Cracking The Coding Interview
 
 Make sure to read the chapter before you start answering the questions!
 
