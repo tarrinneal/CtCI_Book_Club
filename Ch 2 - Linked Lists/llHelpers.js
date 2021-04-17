@@ -24,4 +24,29 @@ function iterateToNode(head, index) {
   return null;
 }
 
-module.exports = {iterateToNode, llGenerator};
+function partitioner(head, count) {
+  let result = {
+    left: [],
+    right: [],
+  }
+  let index = 0;
+  let node = head;
+  while (node) {
+    if (index < count) {
+      result.left.push(node.val);
+    } else {
+      result.right.push(node.val);
+    }
+    node = node.next;
+    index++;
+  };
+  result.left.sort((a, b) => {
+    return a - b;
+  });
+  result.right.sort((a, b) => {
+    return a - b;
+  });
+  return result;
+}
+
+module.exports = {iterateToNode, llGenerator, partitioner};
