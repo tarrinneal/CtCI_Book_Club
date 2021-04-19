@@ -1,9 +1,9 @@
-const stackMin = require('./stackMin');
-const stackMinSol = require('./stackMinSol');
+const StackMin = require('./stackMin');
+const StackMinSol = require('./stackMinSol');
 
 test('creates a stack that can track the min value at all times', () => {
   let stack = new StackMin();
-  let testStack = new stackMinSol();
+  let testStack = new StackMinSol();
 
   stack.push(9);
   stack.push(8);
@@ -20,4 +20,27 @@ test('creates a stack that can track the min value at all times', () => {
   testStack.push(9);
 
   expect(stack).toEqual(testStack);
+
+  stack.pop();
+  stack.pop();
+  testStack.pop();
+  testStack.pop();
+
+  expect(stack.peek()).toEqual(testStack.peek());
+  expect(stack.min()).toEqual(testStack.min());
+
+  stack.pop();
+  stack.pop();
+  testStack.pop();
+  testStack.pop();
+
+  expect(stack.peek()).toEqual(testStack.peek());
+  expect(stack.min()).toEqual(testStack.min());
+  stack.pop();
+  stack.pop();
+  testStack.pop();
+  testStack.pop();
+
+  expect(stack.peek()).toEqual(testStack.peek());
+  expect(stack.min()).toEqual(testStack.min());
 });

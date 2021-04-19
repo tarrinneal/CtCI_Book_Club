@@ -2,8 +2,6 @@
 
 var Stack = require('./../util/Stack');
 
-// Approach, keep an additional stack that keeps the mins
-
 class StackMin extends Stack {
   constructor() {
     super();
