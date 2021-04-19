@@ -28,9 +28,9 @@ test('sorts a stack!', () => {
   st.push(72);
 
   var sortS = sortStack(s);
-  var sortSt = sortStack(st);
-
-  while (!sortS.isEmpty()) {
+  var sortSt = sortStackSol(st);
+  // console.log(sortSt);
+  while (!sortSt.isEmpty()) {
     expect(sortS.pop()).toEqual(sortSt.pop());
   }
 });
