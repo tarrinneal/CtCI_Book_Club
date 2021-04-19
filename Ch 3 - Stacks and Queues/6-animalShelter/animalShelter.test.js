@@ -11,7 +11,7 @@ test('Saves all the animals, in the correct order', () => {
   a.enqueue({ type: 'cat', name: 'xiaoxiao' });
   a.enqueue({ type: 'dog', name: 'fido' });
 
-  var at = new AnimalShelter();
+  var at = new AnimalShelterSol();
   at.enqueue({ type: 'dog', name: 'machi' });
   at.enqueue({ type: 'dog', name: 'daisy' });
   at.enqueue({ type: 'cat', name: 'peanuts' });
