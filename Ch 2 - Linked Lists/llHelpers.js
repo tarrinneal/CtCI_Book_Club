@@ -49,4 +49,15 @@ function partitioner(head, count) {
   return result;
 }
 
+function intersectGenerator(arr) {
+  const list = llGenerator(arr);
+  const list2 = llGenerator([1, 2, 3]);
+  let node = list2;
+  while (node.next) {
+    node = node.next;
+  }
+  node.next = iterateToNode(list, 3);
+  return [list, list2]
+}
+
 module.exports = {iterateToNode, llGenerator, partitioner};
