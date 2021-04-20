@@ -60,4 +60,4 @@ function intersectGenerator(arr) {
   return [list, list2]
 }
 
-module.exports = {iterateToNode, llGenerator, partitioner};
+module.exports = {iterateToNode, llGenerator, partitioner, intersectGenerator};
