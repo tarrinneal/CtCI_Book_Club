@@ -37,4 +37,4 @@ const sumLists2 = (list1, list2) => {
   // Your code here
 }
 
-module.exports = sumLists;
+module.exports = { sumLists, sumLists2 };
