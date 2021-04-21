@@ -1,7 +1,10 @@
 //Write a method to replace all spaces in a string with '%20'.
 
 const URLify = (str) => {
-  //You write code here
+  //trim
+  //replace
+
+  return str.trim().replace(/\s/g, '%20')
 };
 
 module.exports = URLify;
