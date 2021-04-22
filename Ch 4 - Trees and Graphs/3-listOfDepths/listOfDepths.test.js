@@ -26,7 +26,7 @@ tree2.insert(2);
 tree2.insert(5);
 tree2.insert(8);
 
-console.log(tree2);
+//This is not functional atm, if you get to this point and this comment is still here, message me and I'll get it fixed
 
 test('creates linked list of depth of tree', () => {
   expect(listOfDepths(tree)).toBe(listOfDepthsSol(tree));
