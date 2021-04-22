@@ -1,6 +1,6 @@
 # CtCI_Book_Club
 
-JS prompts and solutions as well as testing for every question in Cracking The Coding Interview
+Javascript prompts and solutions as well as testing for every question in Cracking The Coding Interview
 
 Make sure to read the chapter before you start answering the questions!
 
