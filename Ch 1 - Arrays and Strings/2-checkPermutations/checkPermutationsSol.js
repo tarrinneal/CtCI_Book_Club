@@ -1,5 +1,4 @@
-const checkPermutations = (str1, str2) => {
-  return str1.split('').sort().join('') === str2.split('').sort().join('');
-};
+1. It's often easiest to modify strings by going from the end of the string to the beginning.
 
-module.exports = checkPermutations;
+2. You might find you need to know the number of spaces. Can you just count them?
+
