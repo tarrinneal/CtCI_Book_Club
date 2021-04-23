@@ -1,8 +1,5 @@
-You do not have to-and should not-generate all permutations. This would be very
-inefficient.
+Start with the easy thing. Can you check each of the conditions separately?
 
-What characteristics would a string that is a permutation of a palindrome have?
+What is the relationship between the "insert character" option and the "remove character" option? Do these need to be two separate checks?
 
-Have you tried a hash table? You should be able to get this down to 0( N) time.
-
-Can you reduce the space usage by using a bit vector?
+Can you do all three checks in a single pass?

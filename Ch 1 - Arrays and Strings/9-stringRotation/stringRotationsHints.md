@@ -1,8 +1,5 @@
-You do not have to-and should not-generate all permutations. This would be very
-inefficient.
+If a string is a rotation of another, then it's a rotation at a particular point. For example, a rotation of waterbottle at character 3 means cutting waterbottle at character 3 and putting the right half (erbottle) before the left half (wat).
 
-What characteristics would a string that is a permutation of a palindrome have?
+We are essentially asking if there's a way of splitting the first string into two parts, x and y, such that the first string is xy and the second string is yx. For example, x = wat and y = erbottle. The first string is xy = waterbottle. The second string is yx = erbottlewat.
 
-Have you tried a hash table? You should be able to get this down to 0( N) time.
-
-Can you reduce the space usage by using a bit vector?
+Think about the earlier hint. Then think about what happens when you concatenate erbottlewat to itself. You get erbottlewaterbottlewat.

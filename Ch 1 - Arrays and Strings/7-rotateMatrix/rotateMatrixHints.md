@@ -1,8 +1,3 @@
-You do not have to-and should not-generate all permutations. This would be very
-inefficient.
+Try thinking about it layer by layer. Can you rotate a specific layer?
 
-What characteristics would a string that is a permutation of a palindrome have?
-
-Have you tried a hash table? You should be able to get this down to 0( N) time.
-
-Can you reduce the space usage by using a bit vector?
+Rotating a specific layer would just mean swapping the values in four arrays. If you were asked to swap the values in two arrays, could you do this? Can you then extend it to four arrays?
