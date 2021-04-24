@@ -1,4 +1,14 @@
-1. It's often easiest to modify strings by going from the end of the string to the beginning.
+var checkPermute = function (stringOne, stringTwo) {
+  // if different lengths, return false
+  if (stringOne.length !== stringTwo.length) {
+    return false;
+    // else sort and compare
+    // (doesnt matter how it's sorted, as long as it's sorted the same way)
+  } else {
+    var sortedStringOne = stringOne.split('').sort().join('');
+    var sortedStringTwo = stringTwo.split('').sort().join('');
+    return sortedStringOne === sortedStringTwo;
+  }
+};
 
-2. You might find you need to know the number of spaces. Can you just count them?
-
+module.exports = checkPermute;
