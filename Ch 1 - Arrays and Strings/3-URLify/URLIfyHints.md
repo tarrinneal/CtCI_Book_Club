@@ -1,7 +1,3 @@
-//Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+It's often easiest to modify strings by going from the end of the string to the beginning.
 
-function isUnique(str) {
-  //code
-}
-
-module.exports = isUnique;
+You might find you need to know the number of spaces. Can you just count them?
