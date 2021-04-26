@@ -12,5 +12,5 @@ function rotateMatrix(matrix) {
   }
   return newMatrix;
 }
-
+//for in place try moving one index at a time. keep a current, move it to the next spot, make that the current etc
 module.exports = rotateMatrix;
