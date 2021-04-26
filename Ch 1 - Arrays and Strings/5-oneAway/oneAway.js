@@ -8,7 +8,7 @@ function oneAway(str1, str2) {
     return changeOne(str1, str2);
   }
   if (str1.length < str2.length) {
-    return addOne(str1, str2);
+    return removeOne(str2, str1);
   }
   return removeOne(str1, str2);
 }
@@ -17,19 +17,6 @@ function changeOne(str1, str2) {
   let mods = 0;
   for (let i = 0; i < str1.length; i++) {
     if (str1[i] !== str2[i]) {
-      mods++;
-    }
-    if (mods > 1) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function addOne(str1, str2) {
-  let mods = 0;
-  for (let i = 0; i < str1.length; i++) {
-    if (str1[i - mods] !== str2[i]) {
       mods++;
     }
     if (mods > 1) {
