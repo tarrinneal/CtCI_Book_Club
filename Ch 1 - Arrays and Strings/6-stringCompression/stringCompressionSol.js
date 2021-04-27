@@ -1,23 +1,20 @@
-const strComp = function (string) {
-  var compressed = '';
-  var currChar = '';
-  var currCount = '';
-  var maxCount = 1;
-  for (var i = 0; i < string.length; i++) {
-    if (currChar !== string[i]) {
-      console.log(currChar, string[i], i);
-      compressed = compressed + currChar + currCount;
-      maxCount = Math.max(maxCount, currCount);
-      currChar = string[i];
-      currCount = 1;
+function stringCompression(str) {
+  let result = '';
+  let count = 1;
+  let cur = str[0];
+  for (let i = 1; i < str.length; i++) {
+    if (cur === str[i]) {
+      count++;
     } else {
-      currCount++;
+      result = result + cur + count;
+      cur = str[i];
+      count = 1;
     }
   }
-  compressed = compressed + currChar + currCount;
-  maxCount = Math.max(maxCount, currCount);
 
-  return maxCount === 1 ? string : compressed;
-};
+  result = result + cur + count;
 
-module.exports = strComp;
+  return result.length < str.length ? result : str;
+}
+
+module.exports = stringCompression;
