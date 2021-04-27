@@ -19,7 +19,7 @@ function Node(val) {
   this.next = null;
 }
 
-const loopDetection = (head1, head2) => {
+const loopDetection = (head) => {
   //Please code here
 };
 

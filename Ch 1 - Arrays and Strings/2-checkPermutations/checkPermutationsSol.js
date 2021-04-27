@@ -1,5 +1,14 @@
-const checkPermutations = (str1, str2) => {
-  return str1.split('').sort().join('') === str2.split('').sort().join('');
+var checkPermute = function (stringOne, stringTwo) {
+  // if different lengths, return false
+  if (stringOne.length !== stringTwo.length) {
+    return false;
+    // else sort and compare
+    // (doesnt matter how it's sorted, as long as it's sorted the same way)
+  } else {
+    var sortedStringOne = stringOne.split('').sort().join('');
+    var sortedStringTwo = stringTwo.split('').sort().join('');
+    return sortedStringOne === sortedStringTwo;
+  }
 };
 
-module.exports = checkPermutations;
+module.exports = checkPermute;
