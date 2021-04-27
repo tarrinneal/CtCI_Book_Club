@@ -3,7 +3,8 @@
 //you can use .includes to simulate the call of isSubstring
 
 function stringRotation(str1, str2) {
-  //code
+  let megaString = str1 + str1;
+  return megaString.includes(str2);
 }
 
 module.exports = stringRotation;
