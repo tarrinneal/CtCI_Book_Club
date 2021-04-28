@@ -11,21 +11,7 @@ function Node(val) {
 */
 
 function removeDups(head) {
-  let dict = {};
-  let last = null;
-  let looper = (node = head) => {
-    if (dict[node.val]) {
-      last.next = node.next;
-    } else {
-      if (node.next) {
-        dict[node.val] = 1;
-        last = node;
-        looper(node.next);
-      }
-    }
-  };
-  looper();
-  return head;
+  // solution
 }
 
 module.exports = removeDups;
