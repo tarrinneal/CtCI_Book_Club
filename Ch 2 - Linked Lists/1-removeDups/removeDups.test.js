@@ -20,18 +20,25 @@ const nonConsecDupsLLTest = llGenerator([2, 5, 2, 13, 7, 8, 4, 13, 4, 5, 4]);
 const nonConsecDupsLL2 = llGenerator([45, 29, 78, 45, 2, 3, 99, 3, 21]);
 const nonConsecDupsLL2Test = llGenerator([45, 29, 78, 45, 2, 3, 99, 3, 21]);
 
-
 test('does not modify a linked list with no dups', () => {
   expect(removeDups(noDupsLL)).toStrictEqual(noDupsLLTest);
   expect(removeDups(noDupsLL2)).toStrictEqual(noDupsLL2Test);
 });
 
 test('removes consecutive duplicates in a linked list', () => {
-  expect(removeDups(consecDupsLL)).toStrictEqual(removeDupsSol(consecDupsLLTest));
-  expect(removeDups(consecDupsLL2)).toStrictEqual(removeDupsSol(consecDupsLL2Test));
+  expect(removeDups(consecDupsLL)).toStrictEqual(
+    removeDupsSol(consecDupsLLTest)
+  );
+  expect(removeDups(consecDupsLL2)).toStrictEqual(
+    removeDupsSol(consecDupsLL2Test)
+  );
 });
 
 test('removes non consecutive duplicates from a linked list', () => {
-  expect(removeDups(nonConsecDupsLL)).toStrictEqual(removeDupsSol(nonConsecDupsLLTest));
-  expect(removeDups(nonConsecDupsLL2)).toStrictEqual(removeDupsSol(nonConsecDupsLL2Test));
+  expect(removeDups(nonConsecDupsLL)).toStrictEqual(
+    removeDupsSol(nonConsecDupsLLTest)
+  );
+  expect(removeDups(nonConsecDupsLL2)).toStrictEqual(
+    removeDupsSol(nonConsecDupsLL2Test)
+  );
 });
