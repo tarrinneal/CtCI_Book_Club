@@ -10,8 +10,26 @@ function Node(val) {
 }
 */
 
-function removeDups(head) {
-  // solution
+function removeDups(node) {
+  let head = node;
+  //memoize the values
+  let foundValues = {};
+  let previousNode = null;
+
+  //traverse the linked list
+  while (node) {
+    let currentValue = node.val;
+    if (foundValues.hasOwnProperty(currentValue)) {
+      let nextNode = node.next;
+      previousNode.next = nextNode;
+    } else {
+      foundValues[currentValue] = true;
+      previousNode = node;
+    }
+
+    node = node.next;
+  }
+  return head;
 }
 
 module.exports = removeDups;
