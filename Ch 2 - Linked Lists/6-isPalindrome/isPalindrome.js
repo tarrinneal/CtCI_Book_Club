@@ -22,9 +22,8 @@ function Node(val) {
 const isPalindrome = (head) => {
   let node = head;
   let convertedToArray = [];
-  //traverse the linked list
+
   while (node) {
-    //push each value to an array.
     convertedToArray.push(node.val);
     node = node.next;
   }
