@@ -17,7 +17,12 @@ function Node(val) {
 
 
 const deleteMiddle = (node) => {
-  //Please code here
+  //get information from next node
+  let nextValue = node.next.val;
+  let nextNext = node.next.next;
+  //put it on this node
+  node.val = nextValue;
+  node.next = nextNext;
 };
 
 module.exports = deleteMiddle;
