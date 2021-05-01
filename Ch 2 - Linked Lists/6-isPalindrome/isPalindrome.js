@@ -18,8 +18,24 @@ function Node(val) {
   this.next = null;
 }
 
+
 const isPalindrome = (head) => {
-  //Please code here
+  let node = head;
+  let convertedToArray = [];
+  //traverse the linked list
+  while (node) {
+    //push each value to an array.
+    convertedToArray.push(node.val);
+    node = node.next;
+  }
+
+  let forward = convertedToArray.join('');
+  convertedToArray.reverse();
+  let backwards = convertedToArray.join('');
+  if (forward === backwards) {
+    return true;
+  }
+  return false;
 };
 
 
