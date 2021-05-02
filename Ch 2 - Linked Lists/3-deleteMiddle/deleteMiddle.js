@@ -15,9 +15,9 @@ function Node(val) {
 }
 */
 
-
 const deleteMiddle = (node) => {
-  //Please code here
+  node.val = node.next.val;
+  node.next = node.next.next;
 };
 
 module.exports = deleteMiddle;
