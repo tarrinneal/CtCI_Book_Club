@@ -21,7 +21,35 @@ function Node(val) {
 }
 
 const partition = (head, x) => {
-  //Please code here
+  let leftHead, rightHead, leftNode, rightNode;
+  let node = head;
+  while (node) {
+    if (node.val < x) {
+      if (leftHead) {
+        leftNode.next = node;
+      } else {
+        leftHead = node;
+      }
+      leftNode = node;
+    } else {
+      if (rightHead) {
+        rightNode.next = node;
+      } else {
+        rightHead = node;
+      }
+      rightNode = node;
+    }
+    node = node.next;
+  }
+  if (leftHead && rightHead) {
+    leftNode.next = rightHead;
+    return leftHead;
+  } else if (leftHead) {
+    return leftHead;
+  } else if (rightHead) {
+    return rightHead;
+  }
+  return null;
 };
 
 module.exports = partition;
