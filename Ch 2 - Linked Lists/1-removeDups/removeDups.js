@@ -13,18 +13,18 @@ function Node(val) {
 function removeDups(head) {
   let dict = {};
   let last = null;
-  let looper = (node = head) => {
+  let looper = (node) => {
     if (dict[node.val]) {
       last.next = node.next;
     } else {
-      if (node.next) {
-        dict[node.val] = 1;
-        last = node;
-        looper(node.next);
-      }
+      dict[node.val] = true;
+      last = node;
+    }
+    if (node.next) {
+      looper(node.next);
     }
   };
-  looper();
+  looper(head);
   return head;
 }
 
