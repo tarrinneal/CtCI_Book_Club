@@ -15,9 +15,19 @@ function Node(val) {
 }
 */
 
-
 const kthToLast = (head, k) => {
-  //Please code here
+  if (k < 1) {
+    return null;
+  }
+  let cache = {};
+  let node = head;
+  let index = 1;
+  while (node) {
+    cache[index] = node;
+    index++;
+    node = node.next;
+  }
+  return cache[index - k] ? cache[index - k] : null;
 };
 
 module.exports = kthToLast;
