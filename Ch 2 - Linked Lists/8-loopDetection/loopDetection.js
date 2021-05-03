@@ -20,7 +20,28 @@ function Node(val) {
 }
 
 const loopDetection = (head) => {
-  //Please code here
+  let tortoise = head;
+  let hare = head;
+  let cycle = false;
+
+  while (hare && hare.next) {
+    hare = hare.next.next;
+    tortoise = tortoise.next;
+    if (hare === tortoise) {
+      cycle = true;
+      break;
+    }
+  }
+  if (cycle) {
+    tortoise = head;
+    while (tortoise !== hare) {
+      tortoise = tortoise.next;
+      hare = hare.next;
+    }
+  } else {
+    return false;
+  }
+  return tortoise;
 };
 
 

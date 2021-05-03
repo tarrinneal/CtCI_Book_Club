@@ -23,7 +23,21 @@ function Node(val) {
 }
 
 const intersection = (head1, head2) => {
-  //Please code here
+  let memoized = new Map();
+  let node1 = head1;
+  let node2 = head2;
+
+  while (node1) {
+    memoized.set(node1, true);
+    node1 = node1.next;
+  }
+  while (node2) {
+    if (memoized.has(node2)) {
+      return node2;
+    }
+    node2 = node2.next
+  }
+  return false;
 };
 
 

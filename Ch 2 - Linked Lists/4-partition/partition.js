@@ -21,7 +21,42 @@ function Node(val) {
 }
 
 const partition = (head, x) => {
-  //Please code here
+  let node = head;
+  //set up low list
+  let lowHead = null;
+  let lowTail = null;
+  //set up high list
+  let highHead = null;
+  let highTail = null;
+
+  //traverse the passed in list
+  while (node) {
+    if (node.val < x) {
+      if (lowHead === null) {
+        lowHead = node;
+        lowTail = node;
+      } else {
+        lowTail.next = node;
+        lowTail = node;
+      }
+    } else {
+      if (highHead === null) {
+        highHead = node;
+        highTail = node;
+      } else {
+        highTail.next = node;
+        highTail = node;
+      }
+    }
+    node = node.next;
+  }
+  //connect the two lists
+  if (lowTail === null) {
+    return highHead;
+  }
+  lowTail.next = highHead;
+  //return lowHead
+  return lowHead;
 };
 
 module.exports = partition;

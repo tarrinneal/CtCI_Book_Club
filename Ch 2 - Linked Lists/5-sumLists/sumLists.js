@@ -28,8 +28,34 @@ function Node(val) {
   this.next = null;
 }
 
-const sumLists = (list1, list2) => {
-  //Please code here
+const sumLists = (list1, list2, remainder = 0, head = null, previous = null) => {
+  if (list1 === null && list2 === null && remainder === 0) {
+    return head;
+  }
+
+  let total = 0;
+  total += remainder;
+
+  if (list1) {
+    total += list1.val;
+  }
+
+  if (list2) {
+    total += list2.val
+  }
+
+  let currentNodeValue = total % 10;
+  let currentNode = new Node(currentNodeValue);
+
+  if (head === null) {
+    head = currentNode;
+  }
+
+  if (previous !== null) {
+    previous.next = currentNode;
+  }
+
+  return sumLists(list1 ? list1.next : null, list2 ? list2.next : null, total >= 10 ? 1 : 0, head, currentNode);
 };
 
 // Follow up
