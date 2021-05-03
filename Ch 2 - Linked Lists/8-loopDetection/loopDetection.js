@@ -20,7 +20,39 @@ function Node(val) {
 }
 
 const loopDetection = (head) => {
-  //Please code here
+  let tortoise = head;
+  let hare = head.next;
+  let cycle = false;
+  let intersectionIndex = 0;
+  let length = 0;
+  let node = head;
+  while (node) {
+    length++;
+    node = node.next;
+  }
+  while (hare && hare.next) {
+    intersectionIndex++;
+    hare = hare.next.next;
+    tortoise = tortoise.next;
+    if (hare === tortoise) {
+      cycle = true;
+      break;
+    }
+  }
+  if (cycle) {
+    let loopIndex = (length - intersectionIndex) + 1;
+    node = head;
+    let index = 0;
+    while (node) {
+      index++
+      if (index === loopIndex) {
+        return node;
+      }
+      node = node.next;
+    }
+  } else {
+    return false;
+  }
 };
 
 
