@@ -15,15 +15,11 @@ Input:
 var Graph = require('./../util/Graph');
 
 Graph.prototype.findNodeWithNoChildren = function () {
-  for (var node in this.nodes) {
-    if (Object.keys(this.nodes[node]).length === 0) {
-      return node;
-    }
-  }
-  return undefined;
+  //this should be helpful
 };
 
 var buildOrder = function (projects, dependencies) {
   //build some order in your life
 };
+
 module.exports = buildOrder;
