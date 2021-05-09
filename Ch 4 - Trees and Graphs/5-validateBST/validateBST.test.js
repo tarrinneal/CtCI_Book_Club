@@ -18,7 +18,7 @@ bt1a.right = bt1c;
 bt1b.left = bt1d;
 bt1b.right = bt1e;
 
-console.log(validateBST(bt1a), false);
+// console.log(validateBST(bt1a), false);
 
 var bt2a = new BinaryTree(5);
 var bt2b = new BinaryTree(3);
@@ -31,10 +31,11 @@ bt2a.right = bt2c;
 bt2b.left = bt2d;
 bt2b.right = bt2e;
 
-console.log(validateBST(bt2a), true);
+// console.log(validateBST(bt2a), true);
 
 //Tests to be written soon!
 
-test('creates linked list of depth of tree', () => {
-  //to be written
+test('initial tests', () => {
+  expect(validateBST(bt1a)).toBe(false);
+  expect(validateBST(bt2a)).toBe(true);
 });
