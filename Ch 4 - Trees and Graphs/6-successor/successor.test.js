@@ -29,12 +29,9 @@ f.parent = e;
 e.right = g;
 g.parent = e;
 
-// console.log(findSuccessor(f).value, 6);
-// console.log(findSuccessor(g).value, 10);
-
 //More tests to be written soon!
 
 test('initial tests', () => {
-  expect(findSuccessor(f).value).toBe(6);
-  expect(findSuccessor(g).value).toBe(10);
+  expect(successor(f).value).toBe(6);
+  expect(successor(g).value).toBe(10);
 });
