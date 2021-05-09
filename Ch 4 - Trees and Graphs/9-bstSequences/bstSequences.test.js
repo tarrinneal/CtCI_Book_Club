@@ -15,7 +15,7 @@ b.insert(7);
 
 console.log(bstSequences(b));
 
-//More tests to be written soon!
+//this test may fail if your arrays print in a different order.
 
 test('initial tests', () => {
   expect(bstSequences(b)).toEqual(bstSequencesSol(b));
