@@ -1,9 +1,22 @@
-Start with a brute force solution. Can you try all possibilities?
+Reverse engineer this, starting from the outermost layer to the innermost layer
 
-Flipping a O to a 1 can merge two sequences of 1 s-but only if the two sequences are
-separated by only one 0.
+What does it mean if A & B == 0?
 
-Each sequence can be lengthened by merging it with an adjacent sequence (if any) or
-just flipping the immediate neighboring zero. You just need to find the best choice.
+If A & B == 0, then it means that A and B never have a 1 at the same spot. Apply this
+to the equation in the problem.
 
-Try to do it in linear time, a single pass, and 0(1) space.
+If ( n & ( n -1)) == 0, then this means that n and n - 1 never have a 1 in the same
+spot. Why would that happen?
+
+What is the relationship between how n looks and how n - 1 looks? Walk through a
+binary subtraction.
+
+When you do a binary subtraction, you flip the rightmost Os to a 1, stopping when you
+get to a 1 (which is also flipped). Everything (all the 1 s and Os) on the left will stay put.
+
+Picture n and n -1. To subtract 1 from n, you flipped the rightmost 1 to a O and all the Os
+on its right to 1 s. If n & n -1 == 0, then there are no 1 s to the left of the first 1. What
+does that mean about n?
+
+We know that n must have only one 1 if n & ( n -1) == 0. What sorts of numbers have
+only one 1?
