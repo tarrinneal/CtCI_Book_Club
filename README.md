@@ -12,4 +12,4 @@ The solutions are all in their respective Sol file, but don't cheat! You'll be m
 There's also a hints file for each question, I'd recommend reading all of the hints after you find your own solution,
 they provide some good insights as to other solutions to the problems, and potentially more efficient ways of solving them
 
-To read the prompts and chapters yourself, check out the [book](https://cin.ufpe.br/~fbma/Crack/Cracking%20the%20Coding%20Interview%20189%20Programming%20Questions%20and%20Solutions.pdf), it is a great resource and is worth the purchase!
+To read the prompts and chapters yourself, check out the [book](https://iscareers.byu.edu/documents/Resources/Cracking%20the%20Coding%20Interview,%204%20Edition%20-%20150%20Programming%20Interview%20Questions%20and%20Solutions.pdf) (this is an older version of the book), it is a great resource and is worth the purchase!
